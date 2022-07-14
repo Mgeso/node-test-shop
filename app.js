@@ -1,4 +1,4 @@
-console.log('const express = require('express');
+const express = require('express');
 const app = express();
 
 app.use((req, res, next) => {
@@ -8,4 +8,4 @@ app.use((req, res, next) => {
 }); 
 
 module.exports = app;
-')
+    
