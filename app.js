@@ -1,6 +1,6 @@
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-
+const express = require('express');
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
@@ -10,6 +10,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 const middleware = (app)=>{
 app.use(morgan('dev'));
+app.use(express.json());
 
 
 // Routes which should handle requests
